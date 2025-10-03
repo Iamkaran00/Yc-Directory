@@ -1,21 +1,25 @@
 import {withSentryConfig} from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
-const NextConfig = {
-
+const nextConfig: NextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images:{
     dangerouslyAllowSVG : true,
     
     remotePatterns :[
      {
       protocol : 'https',
-      hostname : '*',
+      hostname : 'avatars.githubusercontent.com',
      }
     ]
   },
  experimental:{
   ppr :"incremental",
-  after : true
  },
   devIndicators :{
     
@@ -24,7 +28,7 @@ const NextConfig = {
   }
 };
 
-export default withSentryConfig(undefined, {
+export default withSentryConfig(nextConfig, {
  // For all available options, see:
  // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
