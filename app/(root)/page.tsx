@@ -4,9 +4,9 @@ import Searchform from "../../components/SearchForm";
 import { client } from "@/sanity/lib/client";
 import { STARTUPS_QUERY } from "@/sanity/lib/query";
 import { space } from "postcss/lib/list";
-import {auth} from "@/auth"
+import {auth} from '@/auth'
 import { StartupTypeCard } from "@/components/StartupCard";
-import { sanityFetch, SanityLive } from "@/sanity/lib/live"
+import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 export default async function Home({searchParams}:{
   searchParams : Promise<{query?:string} >
 }) {
@@ -14,8 +14,7 @@ export default async function Home({searchParams}:{
 //  const posts = await client.fetch(STARTUPS_QUERY);
 //  console.log(JSON.stringify(posts,null,2));
 const params = {search:query||null};
-const session = await auth();
-
+  const session = await auth();
  const {data:posts} = await sanityFetch({query:STARTUPS_QUERY,params});
   return (
     <>
