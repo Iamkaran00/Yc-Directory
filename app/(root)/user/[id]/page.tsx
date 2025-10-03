@@ -26,10 +26,10 @@ const Page = async({params} : {params:Promise<{id:string}>}) => {
              <h3 className='text-24-black uppercase text-center line-clamp-1'>{user.name}</h3>   
             </div>
             <Image src ={user.image} alt = {user.name} width = {220} height = {220} className='profile_image' />
-            <p className='text-38-extrabold mt-7 text-center'>
+            <p className='text-38-extrabold mt-7 text-center text-white'>
                 @{user.username}
             </p>
-            <p className='mt-1 text-center text-14-normal'>{user?.bio}</p>
+            <p className='mt-1 text-center text-2xl text-white'>{user?.bio}</p>
         </div>
         <div className='flex-1 flex flex-col gap-5 lg:-mt-5'>
             <p className='text-30-bold'>
