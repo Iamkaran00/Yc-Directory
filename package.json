@@ -2,7 +2,7 @@
   "name": "pitch",
   "version": "0.1.0",
   "private": true,
-    "type": "module", 
+  "type": "module",
   "scripts": {
     "dev": "next dev ",
     "build": "next build --turbopack",
@@ -19,7 +19,7 @@
     "@sanity/client": "^7.11.2",
     "@sanity/image-url": "^1.2.0",
     "@sanity/vision": "^4.9.0",
-    
+    "@sentry/nextjs": "^10.17.0",
     "@tailwindcss/typography": "^0.5.16",
     "@uiw/react-md-editor": "^4.0.8",
     "class-variance-authority": "^0.7.1",
